@@ -5,28 +5,111 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var htmlPages={
+	'page1':
+	{
+	title: 'Page 1',
+	heading: 'General',
+	content:  
+	`
+	<img src="/ui/pro.png" align="right" class="img-medium"/>	
+	<p>
+		I am an IT professional, radio presenter. Love reading, writing, trekking
+		</p>
+		<p>
+		Favorite movies: Saving Private Ryan 
+		</p>
+		<p>
+		Favorite comics: Tintin, Archie, Asterix
+		</p>`
+},
+'page2':{
+	title: 'Page 2',
+	heading: 'Books',
+	content:  
+	`
+<img src="/ui/pro.png" align="right" class="img-medium"/>	
+	<p>
+		Jeffrey Archer
+		</p>
+		<p>
+		Robin Cook
+		</p>
+		<p>
+		Sidney Sheldon
+		</p>
+		<p>
+		Arthur Hailey
+		</p>`
+},
+'page3':{
+	title: 'Page 3',
+	heading: 'Places',
+	content:  
+	`
+	<img src="/ui/pro.png" align="right" class="img-medium"/>	
+	<p>
+		Kerala
+		</p>
+		<p>
+		Kulu Manali
+		</p>
+		<p>
+		Munnar
+		</p>`
+}
+};
+
+function createHtmlTemplate(htmlData)
+{
+	var title=htmlData.title;
+	var date=htmlData.date;
+	var heading=htmlData.heading;
+	var content=htmlData.content;
+
+var htmlTemplate=`
+	<html>
+<head>
+	<title>
+	${title}
+	</title>
+ <link href="/ui/style.css" rel="stylesheet" />
+<body>
+<div class="container">	
+<div>
+<a href="/">Home</a>
+</div>
+	<hr/>
+	<h3>${heading}
+	</h3>
+	<div>	
+		<p>
+			${content}
+		</p>
+	</div>
+</div>
+</body>
+</html>
+`;
+return htmlTemplate;
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/page1', function (req, res) {
-  res.send("Article 1 here ");
-});
-
-app.get('/page2', function (req, res) {
-  res.send("Article 2 here ");
-});
-
-app.get('/page3', function (req, res) {
-  res.send("Article 3 here ");
+app.get('/:pageName', function (req, res) {
+	var pageName=req.params.pageName;
+  res.send(createHtmlTemplate(htmlPages[pageName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/pro.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pro.png'));
 });
 
 
