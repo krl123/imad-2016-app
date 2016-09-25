@@ -17,6 +17,16 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    float: right;
+    margin: 20 px;
+}
+
+.container{
+	max-width: 50 px;
+	margin: auto;
+	color: red;
+	padding-top:60 px;
+	padding-left: 20 px;
+	padding-right: 20 px;
 }
 
