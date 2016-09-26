@@ -23,7 +23,8 @@ var htmlPages={
 		Favorite comics: Tintin, Archie, Asterix
 		</p>`
 },
-'page2':{
+'page2':
+{
 	title: 'Page 2',
 	heading: 'Books',
 	content:  
@@ -41,7 +42,8 @@ var htmlPages={
 		Arthur Hailey
 		</p>`
 },
-'page3':{
+'page3':
+{
 	title: 'Page 3',
 	heading: 'Places',
 	content:  
@@ -73,29 +75,29 @@ function createHtmlTemplate(htmlData)
 
 var htmlTemplate=`
 	<html>
-<head>
-	<title>
-	${title}
-	</title>
- <link href="/ui/style.css" rel="stylesheet" />
-<body onLoad=preLoad()>
-<br>
+    <head>
+	    <title>
+	    ${title}
+	    </title>
+    <link href="/ui/style.css" rel="stylesheet" />
+    <body onLoad=preLoad()>
+    <br>
         <img src="/ui/beas.jpg" class="img-medium"/>
-<div class="container">	
-<div>
-<a href="/">Home</a>
-</div>
-	<hr/>
-	<h3>${heading}
-	</h3>
-	<div>	
-		<p>
-			${content}
-		</p>
-	</div>
-</div>
-</body>
-</html>
+        <div class="container">	
+            <div>
+            <a href="/">Home</a>
+            </div>
+    	<hr/>
+        <h3>${heading}
+        </h3>
+        	<div>	
+        		<p>
+        			${content}
+        		</p>
+        	</div>
+        </div>
+    </body>
+    </html>
 `;
 return htmlTemplate;
 }
