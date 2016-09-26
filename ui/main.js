@@ -16,6 +16,12 @@ img1.onclick=function(){
 	var interval=setInterval(moveLeft(),10);
 };
 
+var counter=0;
+var likeBtn=document.getElementById('like')
+likeBtn.onclick=function(){
+	counter=counter+1;
+	document.getElementById('likey').innerHTML=counter.toString();
+}
 
 
 
