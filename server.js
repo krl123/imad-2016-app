@@ -58,6 +58,12 @@ var htmlPages={
 }
 };
 
+function preLoad()
+{
+    var image=new Image();
+    image.src="/ui/beas.jpg";
+}
+
 function createHtmlTemplate(htmlData)
 {
 	var title=htmlData.title;
@@ -72,7 +78,7 @@ var htmlTemplate=`
 	${title}
 	</title>
  <link href="/ui/style.css" rel="stylesheet" />
-<body>
+<body onLoad=preLoad()>
 <br>
         <img src="/ui/beas.jpg" class="img-medium"/>
 <div class="container">	
