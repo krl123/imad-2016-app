@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: yellow;
     margin-top: 10px;
 }
 
@@ -17,14 +17,14 @@ body {
 }
 
 .img-medium {
-    width: 800px;
-    height:400px;
+    width: 600px;
+    height:300px;
     float: right;
     margin: 10px;
 }
 
 .container{
-	max-width: 200px;
+	max-width: 800px;
 	margin-top: 10px;
 	color: red;
 	padding-top:20px;
