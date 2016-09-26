@@ -82,13 +82,13 @@ var htmlTemplate=`
     <link href="/ui/style.css" rel="stylesheet" />
     <body onLoad=preLoad()>
     <br>
-        <img src="/ui/beas.jpg" class="img-medium"/>
+    <div>
+        <a href="/">Home</a>
+    </div>
+    <hr/>
+    <img src="/ui/beas.jpg" class="img-medium"/>
         <div class="container">	
-            <div>
-            <a href="/">Home</a>
-            </div>
-    	<hr/>
-        <h3>${heading}
+    	<h3>${heading}
         </h3>
         	<div>	
         		<p>
