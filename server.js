@@ -83,7 +83,7 @@ var htmlTemplate=`
 	    ${title}
 	    </title>
     <link href="/ui/style.css" rel="stylesheet" />
-    <body onLoad=preLoad()>
+    <body onLoad="preLoad()">
     <br>
     <div>
         <a href="/">Home</a>
