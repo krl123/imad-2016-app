@@ -13,7 +13,6 @@ var htmlPages={
 	heading: 'General',
 	content:  
 	`
-	<img src="/ui/beas.jpg" class="img-medium"/>	
 	<p>
 		I am an IT professional, radio presenter. Love reading, writing, trekking
 		</p>
@@ -29,7 +28,6 @@ var htmlPages={
 	heading: 'Books',
 	content:  
 	`
-<img src="/ui/beas.jpg" class="img-medium"/>	
 	<p>
 		Jeffrey Archer
 		</p>
@@ -48,7 +46,6 @@ var htmlPages={
 	heading: 'Places',
 	content:  
 	`
-	<img src="/ui/beas.jpg" class="img-medium"/>	
 	<p>
 		Kerala
 		</p>
@@ -76,6 +73,8 @@ var htmlTemplate=`
 	</title>
  <link href="/ui/style.css" rel="stylesheet" />
 <body>
+<br>
+        <img src="/ui/beas.jpg" class="img-medium"/>
 <div class="container">	
 <div>
 <a href="/">Home</a>
