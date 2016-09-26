@@ -13,7 +13,7 @@ var htmlPages={
 	heading: 'General',
 	content:  
 	`
-	<img src="/ui/madi.png" class="img-medium"/>	
+	<img src="/ui/beas.jpg" class="img-medium"/>	
 	<p>
 		I am an IT professional, radio presenter. Love reading, writing, trekking
 		</p>
@@ -29,7 +29,7 @@ var htmlPages={
 	heading: 'Books',
 	content:  
 	`
-<img src="/ui/madi.png" class="img-medium"/>	
+<img src="/ui/beas.jpg" class="img-medium"/>	
 	<p>
 		Jeffrey Archer
 		</p>
@@ -48,7 +48,7 @@ var htmlPages={
 	heading: 'Places',
 	content:  
 	`
-	<img src="/ui/madi.png" class="img-medium"/>	
+	<img src="/ui/beas.jpg" class="img-medium"/>	
 	<p>
 		Kerala
 		</p>
@@ -108,8 +108,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/beas.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'beas.jpg'));
 });
 
 
