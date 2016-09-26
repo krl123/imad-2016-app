@@ -17,8 +17,10 @@ body {
 }
 
 .img-medium {
+    width: 800px;
+    height:400px;
     float: right;
-    margin: 20px;
+    margin: 80px;
 }
 
 .container{
