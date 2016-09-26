@@ -93,12 +93,6 @@ var htmlTemplate=`
         	</div>
         </div>
         <hr/>
-        <div class="textBox">
-        <textarea id="comments" name="commentsBox" cols="50" rows="5">Leave your comments...
-        </textarea>
-        </div>
-        <br/>
-        <input type="submit">
         <script type="text/javascript" src="/ui/main.js">
         </script>  
         </body>
@@ -126,6 +120,14 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/beas.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'beas.jpg'));
+});
+
+var comments=[];
+app.get('/submit', function(req, res){
+
+	comment=req.query.comment;
+	comments.push(comment);
+	res.send(JSON.stringify(comments));
 });
 
 
