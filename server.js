@@ -9,11 +9,10 @@ app.use(morgan('combined'));
 var htmlPages={
 	'page1':
 	{
-	title: 'Page 1',
+	title:'Page 1',
 	heading: 'General',
 	content:  
 	`
-	<img src="/ui/pro.png" align="right" class="img-medium"/>	
 	<p>
 		I am an IT professional, radio presenter. Love reading, writing, trekking
 		</p>
@@ -24,32 +23,35 @@ var htmlPages={
 		Favorite comics: Tintin, Archie, Asterix
 		</p>`
 },
-'page2':{
-	title: 'Page 2',
+'page2':
+{
+	title:'Page 2',
 	heading: 'Books',
 	content:  
 	`
-<img src="/ui/pro.png" align="right" class="img-medium"/>	
 	<p>
+		Favorite authors are 
+		</p>
+		<p>
 		Jeffrey Archer
 		</p>
 		<p>
 		Robin Cook
 		</p>
 		<p>
-		Sidney Sheldon
-		</p>
-		<p>
 		Arthur Hailey
 		</p>`
 },
-'page3':{
-	title: 'Page 3',
+'page3':
+{
+	title:'Page 3',
 	heading: 'Places',
 	content:  
 	`
-	<img src="/ui/pro.png" align="right" class="img-medium"/>	
 	<p>
+	Favorite places are
+		</p>
+		<p>
 		Kerala
 		</p>
 		<p>
@@ -70,30 +72,40 @@ function createHtmlTemplate(htmlData)
 
 var htmlTemplate=`
 	<html>
-<head>
-	<title>
-	${title}
-	</title>
- <link href="/ui/style.css" rel="stylesheet" />
-<body>
-<div class="container">	
-<div>
-<a href="/">Home</a>
-</div>
-	<hr/>
-	<h3>${heading}
-	</h3>
-	<div>	
-		<p>
-			${content}
-		</p>
-	</div>
-</div>
-</body>
-</html>
+    <head>
+	    <title>${title}</title>
+	</head>
+    <link href="/ui/style.css" rel="stylesheet" />
+    <body>
+    <br>
+    <div>
+        <a href="/">Home</a>
+    </div>
+    <hr/>
+    <img id="mainImg" src="/ui/beas.jpg" class="img-medium"/>
+        <div class="container">	
+    	<h3>${heading}
+        </h3>
+        	<div>	
+        		<p>
+        			${content}
+        		</p>
+        	</div>
+        </div>
+        <hr/>
+        <div class="textBox">
+        <textarea id="comments" name="commentsBox" cols="50" rows="5">Leave your comments...
+        </textarea>
+        </div>
+        <br/>
+        <input type="submit">
+        <script type="text/javascript" src="/ui/main.js">
+        </script>  
+        </body>
+    </html>
 `;
 return htmlTemplate;
-};
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -108,12 +120,18 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/pro.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pro.png'));
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
+app.get('/ui/beas.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'beas.jpg'));
 });
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
+      console.log(`IMAD course app listening on port ${port}!`);
+      var d=new Date();
+      console.log(d.toString());
 });

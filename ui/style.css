@@ -1,7 +1,9 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    color:inherit;
+    background-color:blue;
+    background-color: hsl(120, 60%, 70%);
+    margin-top: 10px;
 }
 
 .center {
@@ -17,6 +19,20 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    width: 600px;
+    height:300px;
+    float: right;
+    margin: 10px;
+    border-radius:8px;
+}
+
+.container{
+    margin-top: 10px;
+    color: red;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    font-family: "courier new";
+    font-size: 20px;
 }
 
