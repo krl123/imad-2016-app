@@ -99,6 +99,11 @@ var htmlTemplate=`
         		</p>
         	</div>
         </div>
+        <hr/>
+        <text area id="comments" name="commentsBox" cols="50" rows="5">Leave your comments...
+        </text area>
+        <br/>
+        <input type="submit">Submit
     </body>
     </html>
 `;
