@@ -30,13 +30,13 @@ var htmlPages={
 	content:  
 	`
 	<p>
+		Favorite authors are 
+		</p>
+		<p>
 		Jeffrey Archer
 		</p>
 		<p>
 		Robin Cook
-		</p>
-		<p>
-		Sidney Sheldon
 		</p>
 		<p>
 		Arthur Hailey
@@ -49,6 +49,9 @@ var htmlPages={
 	content:  
 	`
 	<p>
+	Favorite places are
+		</p>
+		<p>
 		Kerala
 		</p>
 		<p>
