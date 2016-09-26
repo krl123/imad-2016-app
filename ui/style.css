@@ -1,6 +1,8 @@
 body {
     font-family: sans-serif;
-    background-color: green;
+    color:inherit;
+    background-color:blue;
+    background-color: hsl(120, 60%, 70%);
     margin-top: 10px;
 }
 
