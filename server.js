@@ -107,7 +107,12 @@ app.get('/', function (req, res) {
 
 app.get('/:pageName', function (req, res) {
 	var pageName=req.params.pageName;
-  res.send(createHtmlTemplate(htmlPages[pageName]));
+	if(pageName==="index"){
+	var comments=req.params.comment;}
+	else
+	{
+    res.send(createHtmlTemplate(htmlPages[pageName]));
+	}
 });
 
 app.get('/ui/style.css', function (req, res) {
