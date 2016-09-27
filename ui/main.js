@@ -23,5 +23,12 @@ likeBtn.onclick=function(){
 	document.getElementById('likey').innerHTML=counter.toString();
 }
 
+$(document).ready(function() {
+ $("#readFile").click(function() {
+    $.get('data.txt', function(data) {
+      $("#container").html(data);
+    }, 'text');
+ });
+});
 
 
