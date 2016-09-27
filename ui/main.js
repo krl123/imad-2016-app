@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-var comments=document.getElementById("comments");
+var comments=document.getElementById("comment");
 		console.log("comments: "+comments.value);
 
 var img1=document.getElementById("mainImg");
@@ -23,8 +23,10 @@ likeBtn.onclick=function(){
 	document.getElementById('likey').innerHTML=counter.toString();
 }
 
- var message = $('textarea#message').val();
+var message = $('textarea#comment').val();
 console.log("commentsFromBox: "+message);
+
+document.getElementById('commentsList').value=message;
 
 $(document).ready(function() {
  $("#submitBtn").click(function() {
