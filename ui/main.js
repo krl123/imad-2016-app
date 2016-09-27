@@ -24,9 +24,9 @@ likeBtn.onclick=function(){
 }
 
 $(document).ready(function() {
- $("#readFile").click(function() {
+ $("#submitBtn").click(function() {
     $.get('data.txt', function(data) {
-      $("#container").html(data);
+      $("#commentsList").innerHTML(data);
     }, 'text');
  });
 });
