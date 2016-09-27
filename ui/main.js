@@ -23,6 +23,9 @@ likeBtn.onclick=function(){
 	document.getElementById('likey').innerHTML=counter.toString();
 }
 
+ var message = $('textarea#message').val();
+console.log("commentsFromBox: "+message);
+
 $(document).ready(function() {
  $("#submitBtn").click(function() {
     $.get('data.txt', function(data) {
